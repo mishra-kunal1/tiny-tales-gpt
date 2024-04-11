@@ -18,13 +18,14 @@ set -ev
 # [START getting_started_gce_startup_script]
 # Install or update needed software
 apt-get update
-apt-get install -yq git supervisor python python-pip python3-distutils
-pip install --upgrade pip virtualenv
+#apt-get install -yq git
+#apt-get install -yq git supervisor python python-pip python3-distutils
+#pip install --upgrade pip virtualenv
 
 # Fetch source code
 export HOME=/root
-git clone https://github.com/mishra-kunal1/tiny-tales-gpt.git /opt/app
-
+#git clone ssh://kunal.mishra.1096@gmail.com@source.developers.google.com:2022/p/deep-learning-project-419801/r/github_mishra-kunal1_tiny-tales-gpt
+gcloud source repos clone github_mishra-kunal1_tiny-tales-gpt --project=deep-learning-project-419801
 # Install Cloud Ops Agent
 sudo bash /opt/app/add-google-cloud-ops-agent-repo.sh --also-install
 
