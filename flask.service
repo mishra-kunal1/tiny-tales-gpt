@@ -1,0 +1,16 @@
+[Unit]
+Description=Flask App
+After=network.target
+
+[Service]
+Type=simple
+User=kunalmishra
+Group=www-data
+WorkingDirectory=/home/kunalmishra/tiny_tales_gpt
+EnvironmentFile=/etc/environment
+ExecStart=/opt/conda/bin/python /home/kunalmishra/tiny_tales_gpt/app.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
