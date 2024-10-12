@@ -60,10 +60,10 @@ model.to(device)
 def index():
     return render_template('./index.html')
 
-def write_log(log_message):
-    with open('log.txt', 'a') as log_file:  # Open the existing log file in append mode
-        log_time = time.strftime('%Y-%m-%d %H:%M:%S') # Get current time
-        log_file.write(f"{log_time} - {log_message}\n")
+# def write_log(log_message):
+#     with open('log.txt', 'a') as log_file:  # Open the existing log file in append mode
+#         log_time = time.strftime('%Y-%m-%d %H:%M:%S') # Get current time
+#         log_file.write(f"{log_time} - {log_message}\n")
 
 @app.route('/generate_text', methods=['POST'])
 def generate_text():
