@@ -95,7 +95,7 @@ def generate_text():
     end=time.time()
     time_in_seconds = round(end-start,2)
     #print('Time taken:', time_in_seconds)
-    write_log(f"Prompt: {prompt}, Num Samples: {num_samples} , Time taken: {time_in_seconds} seconds, Max Tokens: {max_new_tokens}")
+    #write_log(f"Prompt: {prompt}, Num Samples: {num_samples} , Time taken: {time_in_seconds} seconds, Max Tokens: {max_new_tokens}")
     return render_template('result.html', generated_texts=generated_texts)
 
 
